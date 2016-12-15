@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="H7S-tY-Xec">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="tlT-dT-CMc">
+            <objects>
+                <navigationController id="H7S-tY-Xec" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zXZ-ep-SXT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2g2-f8-VdX" kind="relationship" relationship="rootViewController" id="yzH-sV-X9F"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="heM-Uc-gMu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-534" y="115"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ycf-B9-a8a">
+            <objects>
+                <viewController id="2g2-f8-VdX" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CVX-FA-WDd"/>
+                        <viewControllerLayoutGuide type="bottom" id="pZg-FD-p6s"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b7m-Ru-9TE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceT-OP-oKW">
+                                <frame key="frameInset" minX="144" minY="160" width="103" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.16862745100000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="拍照按钮"/>
+                                <connections>
+                                    <action selector="paiZhao:" destination="2g2-f8-VdX" eventType="touchUpInside" id="2Sz-ZC-IxD"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LYG-5o-Okg">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="107" id="9Mj-Ot-8o0"/>
+                                    <constraint firstAttribute="width" constant="186" id="Epm-Ge-kxb"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pZg-FD-p6s" firstAttribute="top" secondItem="LYG-5o-Okg" secondAttribute="bottom" constant="207" id="Xnv-Mq-Zoh"/>
+                            <constraint firstItem="LYG-5o-Okg" firstAttribute="centerX" secondItem="b7m-Ru-9TE" secondAttribute="centerX" id="Xoe-Ln-c82"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="D6A-Ld-h7N"/>
+                    <connections>
+                        <outlet property="imageView" destination="LYG-5o-Okg" id="tZh-jC-13C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dg9-AX-PWN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="325.60000000000002" y="106.59670164917542"/>
+        </scene>
+    </scenes>
+</document>
